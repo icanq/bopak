@@ -23,6 +23,7 @@ function App() {
       setDataBopak(dataBops);
     }
   }, [dataBops]);
+  console.log(dataBops)
 
   if (loading) {
     return (
@@ -34,6 +35,13 @@ function App() {
 
   if (error) {
     return <div>Error!</div>;
+  }
+
+  function NewlineText(props) {
+    const text = props.text;
+    const newText = text.split('\n').map(str => <p style={{ fontSize: "12px" }}>{str}</p>);
+    
+    return newText;
   }
 
   return (
@@ -58,9 +66,9 @@ function App() {
               >
                 <div className="card-body">
                   <h5 className="card-title">{e.nama}</h5>
-                  <p className="card-text" style={{ fontSize: "12px" }}>
-                    {e.ucapan}
-                  </p>
+                  <NewlineText className="card-text" text={e.ucapan}>
+                    
+                  </NewlineText>
                 </div>
               </div>
             </div>
