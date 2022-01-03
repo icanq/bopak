@@ -1,6 +1,6 @@
 import "./App.css";
 import useGoogleSheets from "use-google-sheets";
-import Flicking, { ViewportSlot } from "@egjs/react-flicking";
+import Flicking from "@egjs/react-flicking";
 import { Arrow } from "@egjs/flicking-plugins";
 import "@egjs/flicking-plugins/dist/arrow.css";
 import "@egjs/flicking-plugins/dist/flicking-plugins.css";
