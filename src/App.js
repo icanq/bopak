@@ -53,7 +53,7 @@ function App() {
           horizontal={false}
           circular={false}
           plugins={_plugins}
-          // align={"center"}
+          align={"center"}
           style={{ height: "100vh", marginLeft: "5vw"}}
         >
           {dataBopak.slice(1).map((e) => (
