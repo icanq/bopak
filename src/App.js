@@ -39,7 +39,7 @@ function App() {
 
   function NewlineText(props) {
     const text = props.text;
-    const newText = text.split('\n').map(str => <p style={{ fontSize: "12px" }}>{str}</p>);
+    const newText = text.split('\n').map(str => <p style={{ fontSize: "12px"}}>{str}</p>);
     
     return newText;
   }
@@ -50,10 +50,11 @@ function App() {
         <Flicking
           viewportTag="div"
           cameraTag="div"
+          // horizontal={false}
           circular={false}
           plugins={_plugins}
           align={"center"}
-          style={{ height: "400px", top: "25vh" }}
+          style={{ height: "420px", top: "20vh" }}
         >
           {dataBopak.slice(1).map((e) => (
             <div
@@ -66,9 +67,8 @@ function App() {
               >
                 <div className="card-body">
                   <h5 className="card-title">{e.nama}</h5>
-                  <NewlineText className="card-text" text={e.ucapan}>
-                    
-                  </NewlineText>
+                  { e?.link ? <img src={e.link} alt="img link" style={{width: "10rem", textAlign: "center"}} /> : null }
+                  <NewlineText className="card-text" text={e.ucapan} />
                 </div>
               </div>
             </div>
