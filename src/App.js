@@ -28,7 +28,7 @@ function App() {
   if (loading) {
     return (
       <div className="App" >
-        <img className="App-logo" src="hbd.png" alt="hbdbop" style={{ height: "400px", top: "18vh"}} />
+        <img className="App-logo" src="hbd.png" alt="hbdbop" style={{ height: "350px", top: "18vh"}} />
       </div>
     );
   }
