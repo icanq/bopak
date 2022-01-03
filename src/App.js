@@ -39,7 +39,7 @@ function App() {
 
   function NewlineText(props) {
     const text = props.text;
-    const newText = text.split('\n').map(str => <p style={{ fontSize: "12px"}}>{str}</p>);
+    const newText = text.split('\n').map(str => <p style={{ fontSize: "12px", lineHeight: "1px"}}>{str}</p>);
     
     return newText;
   }
@@ -59,7 +59,7 @@ function App() {
           {dataBopak.slice(1).map((e) => (
             <div
               className="card-panel"
-              style={{ height: "10rem", width: "18rem", borderRadius: "8px" }}
+              style={{ height: "10rem", width: "20rem", borderRadius: "8px" }}
             >
               <div
                 className="card mx-3"
