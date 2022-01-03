@@ -50,19 +50,19 @@ function App() {
         <Flicking
           viewportTag="div"
           cameraTag="div"
-          // horizontal={false}
+          horizontal={false}
           circular={false}
           plugins={_plugins}
-          align={"center"}
-          style={{ height: "420px", top: "20vh" }}
+          // align={"center"}
+          style={{ height: "100vh", marginLeft: "5vw"}}
         >
           {dataBopak.slice(1).map((e) => (
             <div
               className="card-panel"
-              style={{ height: "10rem", width: "20rem", borderRadius: "8px" }}
+              style={{  width: "20rem", borderRadius: "8px" }}
             >
               <div
-                className="card mx-3"
+                className="card my-3"
                 style={{ backgroundColor: "rgba(255, 255, 255, 0.8)" }}
               >
                 <div className="card-body">
@@ -73,10 +73,10 @@ function App() {
               </div>
             </div>
           ))}
-          <ViewportSlot>
+          {/* <ViewportSlot>
             <span className="flicking-arrow-prev"></span>
             <span className="flicking-arrow-next"></span>
-          </ViewportSlot>
+          </ViewportSlot> */}
         </Flicking>
       </div>
     </div>
